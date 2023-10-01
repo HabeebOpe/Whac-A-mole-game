@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Catch me 👻👻</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <div class="loading" id="load">
+      <div class="heading">
+         <p>@habeebullah</p>
+      </div>
+      <div class="bod-sec">
+         <img src="asset/poster.png">
+         <h2>Whac A Mole</h2>
+      </div>
+      <div class="start-game">
+         <button id="start-game">START GAME</button>
+      </div>
+      <div class="foot-sec">
+         <p>© Habeebullah 2023 All Rights Reserved </p>
+      </div>
+   </div>
+  <div class="container">
+    <div class="score-time">
+      <div class="score">
+        <span>SCORE</span>
+        <h2 id="score">0</h2>
+      </div>
+      <div class="time">
+        <h2 id="time">60</h2><span>TIME</span>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="square" id="1"></div>
+      <div class="square mole" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+      <div class="square" id="9"></div>
+    </div>
+    <div id="pause" class="open-nav">
+      Pause
+    </div>
+    <div class="nav">
+      <div class="nav-flex">
+        <ul>
+          <p>Speed</p>
+          <li class="0.5" id="speed">0.5x</li>
+          <li class="1.5" id="speed">1.5px</li>
+          <li class="2" id="speed">2px</li>
+          <li class="3" id="speed">3px</li>
+        </ul>
+        <div class="btns">
+          <button id="resume">Resume</button>
+          <button id="restart">Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="game-end">
+    <div class="game-e">
+      <img src="asset/mole.png" alt="">
+      <h1>Time Elapsed!</h1>
+      <div>
+        <h2><span>Score:</span><span id="score">0</span></h2>
+      </div>
+      <button id="restart">Home</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

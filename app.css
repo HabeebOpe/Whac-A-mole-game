@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Yatra One', cursive;
+}
+body {
+  font-family: 'PT Sans', sans-serif;
+  background: linear-gradient(#343434, #88773A);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(130deg, #FFCA32, #8C6DFF);
+  transition: 1s ease;
+  display: flex;
+}
+body.start-game .loading {
+  display: none;
+}
+body.home .loading{
+  display: flex;
+}
+.loading .heading {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+.loading .heading p {
+  font-size: 14px;
+  color: #000;
+}
+.loading .bod-sec {
+  text-align: center;
+}
+.loading .bod-sec img {
+  width: 200px;
+  height: 200px;
+}
+.loading .bod-sec h2 {
+  margin-top: 10px;
+  color: #fff;
+}
+.loading .start-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20%;
+}
+.start-game button {
+  width: 200px;
+  height: 55px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background-color: #000;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+.start-game button:hover {
+  animation: btn 0.3s ease;
+}
+@keyframes btn {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+.loading .foot-sec {
+  position: absolute;
+  bottom: 5px;
+}
+.loading .foot-sec p {
+  font-size: 14px;
+  color: #000;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  display: none;
+}
+body.start-game .container {
+  display: flex;
+}
+body.end-game .container{
+  display: none
+}
+body.home .container{
+  display: none;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.square {
+  width: 33.2%;
+  height: 10rem;
+  border: 1px solid #000000;
+}
+.mole {
+  background: url(asset/mole.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.score-time {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 10%;
+  color: #fff;
+  background: rgba(38, 38, 38, 0.5);
+  background: #000;
+  border: 2px solid gold;
+  border-radius: 10px;
+  margin: 10px;
+}
+.score,
+.time {
+  display: flex;
+  align-items: center;
+}
+.score-time span {
+  font-size: 16px;
+  font-weight: lighter;
+   color: gold;
+  padding: 8px;
+}
+.score-time h2 {
+  padding: 8px;
+}
+.open-nav {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  font-weight: lighter;
+  border: 1px solid gold;
+  border-radius: 0 0 20px 0;
+  color: gold;
+  background: #000;
+  transition: 0.3s ease;
+}
+.open-nav:hover{
+  animation: btn 0.3s ease;
+}
+body.open .open-nav {
+  display: none;
+}
+.nav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  border: 1px solid gold;
+  border-radius: 10px;
+}
+body.open .nav {
+  display: flex;
+}
+.nav p {
+  padding: 10px;
+  font-weight: bolder;
+}
+.nav ul {
+  padding: 5px;
+}
+.nav ul p{
+  font-size: 20px;
+  font-weight: lighter;
+}
+.nav ul li {
+  padding: 5px;
+  padding-left: 7px;
+  width: 80px;
+  font-weight: lighter;
+  transition: 0.3s ease;
+}
+.nav ul li:hover {
+  transform: scale(1.2);
+  color: gold;
+}
+.nav .btns {
+  padding: 10px;
+}
+.nav .btns button {
+  display: block;
+  justify-self: right;
+  padding: 12px;
+  border: 1px solid gold;
+  border-radius: 5px;
+  border-radius: 0 0 20px 0;
+  font-size: 15px;
+  font-weight: lighter;
+  color: gold;
+  background-color: #000;
+  margin: 10px 0;
+}
+.btns button:hover{
+  animation: btn 0.3s ease;
+}
+.game-end{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+body.end-game .game-end{
+  display: flex;
+}
+body.home .game-end{
+  display: none;
+}
+.game-e img{
+  width: 200px;
+  padding: 20px;
+}
+.game-e h1{
+  font-weight: lighter;
+  color: gold;
+}
+.game-e div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+.game-e div h2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+  font-weight: lighter;
+  color: gold;
+}
+.game-end button{
+  width: 200px;
+  height: 55px;
+  padding: 10px;
+  border: 1px solid gold;
+  font-size: 18px;
+  font-weight: lighter;
+  border-radius: 5px;
+  letter-spacing: 5px;
+  color: gold;
+  background-color: #000;
+  margin: 15px 0;
+}
+.game-end button:hover{
+  animation: btn 0.3s ease;
+}
+@keyframes btn {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.2)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+@media (max-width: 420px) {
+  .score-time{
+    padding: 10px;
+  }
+}
